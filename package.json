@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "My portfolio built with Astro.",
   "type": "module",
+  "engines": {
+    "node": "=18.18.2"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
