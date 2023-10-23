@@ -1,0 +1,30 @@
+{
+  "name": "astro-portfolio",
+  "version": "0.0.1",
+  "description": "My portfolio built with Astro.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "NOIZET Maxence",
+    "email": "noizetmaxencepro@gmail.com",
+    "url": "https://github.com/mqxewww"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mqxewww/astro-portfolio.git"
+  },
+  "keywords": [
+    "typescript",
+    "astro"
+  ],
+  "dependencies": {
+    "astro": "^3.3.3"
+  }
+}
