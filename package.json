@@ -11,7 +11,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write . && prettier --write \"**/*.astro\" --parser astro && eslint \"{public,src}/**/*.{astro,ts}\""
   },
   "license": "MIT",
   "author": {
@@ -29,5 +30,15 @@
   ],
   "dependencies": {
     "astro": "^3.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "astro-eslint-parser": "^0.16.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-astro": "^0.29.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }
