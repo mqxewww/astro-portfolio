@@ -1,0 +1,25 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+body {
+  background-color: #0b0b10;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 13px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #4a4a4a;
+}
