@@ -5,6 +5,6 @@ interface ILink {
 }
 
 export const links: ILink[] = [
-  { color: "warning", href: "/about-me", text: "Infos" },
+  // { color: "warning", href: "/about-me", text: "Infos" },
   { color: "light", href: "/projects", text: "Projets" }
 ];

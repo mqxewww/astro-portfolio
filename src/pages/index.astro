@@ -11,19 +11,18 @@ import MainLayout from "../layouts/MainLayout.astro";
         Bonjour 👋, je m'appelle <span class="text-warning">Maxence</span>.
       </h1>
       <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4 mt-5">
+        <p class="fs-5 mt-5">
           Développeur français de 21 ans, passionné par le développement web/backend.
         </p>
         <p class="fs-5">
           Diplômé d'un Bachelor Concepteur Développeur d'Applications. Parcourez mon portfolio pour
           en savoir plus sur moi et les projets que j'ai réalisés.
         </p>
-        <p class="fs-5 mb-4 mt-5">
+        <p class="fs-5 mt-5">
           Vous pouvez également me contacter sur mon email : <p class="text-sm text-warning">
             noizetmaxencepro@gmail.com
           </p>
         </p>
-
         <div class="d-grid gap-2 mt-5 d-sm-flex justify-content-sm-center">
           {links.map(({ color, href, text }) => <Button color={color} href={href} text={text} />)}
         </div>
