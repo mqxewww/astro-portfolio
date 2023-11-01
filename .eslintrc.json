@@ -5,9 +5,9 @@
     "es2020": true
   },
   "extends": [
-    "plugin:astro/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:astro/recommended",
     "prettier"
   ],
   "parserOptions": {
@@ -19,7 +19,6 @@
     {
       "files": ["*.astro"],
       "parser": "astro-eslint-parser",
-      "extends": ["prettier"],
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
@@ -28,6 +27,8 @@
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": 1,
-    "@typescript-eslint/no-explicit-any": 1
+    "@typescript-eslint/no-explicit-any": 1,
+    "astro/no-conflict-set-directives": 1,
+    "astro/no-unused-define-vars-in-style": 1
   }
 }
