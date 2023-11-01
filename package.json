@@ -12,7 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write . && prettier --write \"**/*.astro\" --parser astro && eslint \"{public,src}/**/*.{astro,ts}\""
+    "format": "prettier --write \"**/*.ts\" && prettier --write \"**/*.astro\" --parser astro && eslint \"{public,src}/**/*.{astro,ts}\""
   },
   "license": "MIT",
   "author": {

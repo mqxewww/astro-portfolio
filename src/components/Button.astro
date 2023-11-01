@@ -1,0 +1,15 @@
+---
+interface Props {
+  color: string;
+  href: string;
+  text: string;
+}
+
+const { color, href, text } = Astro.props;
+---
+
+<button type="button" class={`btn btn-outline-${color} btn-lg px-5`}>
+  <a href={href} class="nav-link">
+    {text}
+  </a>
+</button>

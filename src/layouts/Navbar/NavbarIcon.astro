@@ -1,0 +1,14 @@
+---
+interface Props {
+  href: string;
+  icon: string;
+  text: string;
+}
+
+const { href, icon, text } = Astro.props;
+---
+
+<a href={href} class="nav-link text-white">
+  <img src={`/svgs/${icon}.svg`} class="d-block mx-auto mb-1" height="24" />
+  {text}
+</a>
