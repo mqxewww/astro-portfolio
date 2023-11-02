@@ -1,0 +1,66 @@
+---
+import type { GetStaticPaths } from "astro";
+import Paragraph from "../../components/Paragraph.astro";
+import { projects, type IProject } from "../../constants/projects.constant";
+import displayNameHelper from "../../helpers/display-name.helper";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+interface Props {
+  project: IProject;
+}
+
+export const getStaticPaths = (() => {
+  return projects.map((project) => ({
+    params: {
+      name: project.name
+    },
+    props: {
+      project
+    }
+  }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.props;
+---
+
+<MainLayout title={`Project: ${project.name}`}>
+  <div class="text-center px-5 py-5">
+    <div class="py-5">
+      <h1 class="display-4 fw-bold text-white mb-5">
+        Projet: <span class="text-warning">{displayNameHelper(project.name)}</span>
+      </h1>
+      <Paragraph title="Présentation" divider={true}>
+        <p class="fs-5 mb-5 mt-5 text-white">{project.description.intro}</p>
+        <div class="mb-5 align-items-center me-auto">
+          <div class="d-flex justify-content-center">
+            <div class="d-flex align-items-center">
+              <img src="/svgs/calendar.svg" class="bi me-2" height="24" />
+              <p class="text-white mb-0">{project.date}</p>
+            </div>
+          </div>
+          {
+            project.links?.map((link) => (
+              <div class="d-flex justify-content-center mt-3">
+                <div class="d-flex align-items-center">
+                  <img src="/svgs/link.svg" class="bi me-2" height="24" />
+                  <a href={link.href} class="text-decoration-none text-white mb-0" target="_blank">
+                    {link.name}
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </Paragraph>
+      {
+        project.description.features && (
+          <Paragraph title="Fonctionnalités" divider={true}>
+            {project.description.features.map((feature) => (
+              <p class="fs-5 mb-5 mt-5 text-white">{feature}</p>
+            ))}
+          </Paragraph>
+        )
+      }
+    </div>
+  </div>
+</MainLayout>
