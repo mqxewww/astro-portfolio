@@ -10,25 +10,18 @@ const { project } = Astro.props;
 ---
 
 <div class="col">
-  <div
-    class="card card-cover card-body h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
-    style="background-image: url('/images/project-background.jpg');"
-  >
-    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
+  <div class="card card-cover card-body h-100 overflow-hidden bg-dark rounded-4">
+    <div class="d-flex flex-column h-100 p-5 pb-3">
+      <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold text-white">
         {displayNameHelper(project.name)}
       </h3>
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-auto">
           <img src="/svgs/calendar.svg" class="bi me-2" height="24" />
-          <small>{project.date}</small>
+          <small class="text-white">{project.date}</small>
         </li>
         <li>
-          {
-            project.icons.map((icon) => (
-              <img src={`/svgs/${icon}.svg`} class="mr-3 ml-3" height="32" />
-            ))
-          }
+          {project.icons.map((icon) => <img src={`/svgs/${icon}.svg`} height="32" />)}
         </li>
       </ul>
     </div>
