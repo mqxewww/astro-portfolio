@@ -6,7 +6,7 @@ astro-portfolio is my portfolio built with Astro. It is available [here](https:/
 
 ## More about astro-portfolio :memo:
 
-[![Top language](https://img.shields.io/github/languages/top/mqxewww/astro-portfolio?color=777BB4&logo=php&logoColor=white&style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/search?l=php)
-[![License](https://img.shields.io/github/license/mqxewww/astro-portfolio?style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/blob/master/LICENSE)
+[![Top language](https://img.shields.io/github/languages/top/mqxewww/astro-portfolio?color=777BB4&style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/search?l=php)
+[![License](https://img.shields.io/github/license/mqxewww/astro-portfolio?style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/blob/main/LICENSE.md)
 
 ~ mqxewww, 2023
