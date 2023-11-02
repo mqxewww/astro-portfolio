@@ -6,6 +6,6 @@ interface INavbarIcon {
 
 export const navbarIcons: INavbarIcon[] = [
   { href: "/", icon: "home", text: "Accueil" },
-  // { href: "/about-me", icon: "info", text: "Infos" },
+  { href: "/about-me", icon: "info", text: "Infos" },
   { href: "/projects", icon: "grid", text: "Projets" }
 ];
