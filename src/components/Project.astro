@@ -17,11 +17,11 @@ const { project } = Astro.props;
       </h3>
       <ul class="d-flex list-unstyled mt-auto">
         <li class="d-flex align-items-center me-auto">
-          <img src="/svgs/calendar.svg" class="bi me-2" height="24" />
+          <img src="/svgs/calendar.svg" class="bi me-2" height="24" alt="calendar" />
           <small class="text-white">{project.date}</small>
         </li>
         <li>
-          {project.icons.map((icon) => <img src={`/svgs/${icon}.svg`} height="32" />)}
+          {project.icons.map((icon) => <img src={`/svgs/${icon}.svg`} height="32" alt={icon} />)}
         </li>
       </ul>
     </div>

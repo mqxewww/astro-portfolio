@@ -34,7 +34,7 @@ const { project } = Astro.props;
         <div class="mb-5 align-items-center me-auto">
           <div class="d-flex justify-content-center">
             <div class="d-flex align-items-center">
-              <img src="/svgs/calendar.svg" class="bi me-2" height="24" />
+              <img src="/svgs/calendar.svg" class="bi me-2" height="24" alt="calendar" />
               <p class="text-white mb-0">{project.date}</p>
             </div>
           </div>
@@ -42,7 +42,7 @@ const { project } = Astro.props;
             project.links?.map((link) => (
               <div class="d-flex justify-content-center mt-3">
                 <div class="d-flex align-items-center">
-                  <img src="/svgs/link.svg" class="bi me-2" height="24" />
+                  <img src="/svgs/link.svg" class="bi me-2" height="24" alt="repository" />
                   <a href={link.href} class="text-decoration-none text-white mb-0" target="_blank">
                     {link.name}
                   </a>
