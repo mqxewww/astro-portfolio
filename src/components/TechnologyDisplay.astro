@@ -9,7 +9,7 @@ const { technology } = Astro.props;
 ---
 
 <a class="text-decoration-none" href={technology.href} target="_blank">
-  <img height="40" src={`/svgs/${technology.icon}.svg`} />
+  <img height="40" src={`/svgs/${technology.icon}.svg`} alt={technology.icon} />
 </a>
 
 <style>
