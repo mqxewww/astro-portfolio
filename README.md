@@ -9,4 +9,4 @@ Portfolio built with Astro. It is available [here](https://portfolio.apps.mqxeww
 [![Top language](https://img.shields.io/github/languages/top/mqxewww/astro-portfolio?color=FA9C1B&style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/search?l=astro)
 [![License](https://img.shields.io/github/license/mqxewww/astro-portfolio?style=for-the-badge)](https://github.com/mqxewww/astro-portfolio/blob/main/LICENSE.md)
 
-~ mqxewww, 2023
+~ mqxewww, 2024
