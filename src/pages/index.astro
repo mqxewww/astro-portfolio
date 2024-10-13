@@ -1,34 +1,23 @@
 ---
-import Button from "../components/Button.astro";
-import { links } from "../constants/links.constant";
-import MainLayout from "../layouts/MainLayout.astro";
+import Layout from "~layouts/Layout.astro";
 ---
 
-<MainLayout title="Home 🏠">
-  <div class="text-center px-5 py-5">
-    <div class="py-5">
-      <h1 class="display-4 fw-bold text-white">
-        Bonjour 👋, je m'appelle <span class="text-warning">Maxence</span>.
-      </h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mt-5 text-white">
-          Développeur français de 21 ans, passionné par le développement web/backend.
-        </p>
-        <p class="fs-5 text-white">
-          Diplômé d'un Bachelor Concepteur Développeur d'Applications. Parcourez mon portfolio pour
-          en savoir plus sur moi et les projets que j'ai réalisés.
-        </p>
-        <p class="fs-5 mt-5 text-white">
-          Vous pouvez également me contacter sur mon email : <p
-            class="text-sm text-warning text-decoration-underline"
-          >
-            noizetmaxence@proton.me
-          </p>
-        </p>
-        <div class="d-grid gap-2 mt-5 d-sm-flex justify-content-sm-center">
-          {links.map(({ color, href, text }) => <Button color={color} href={href} text={text} />)}
-        </div>
-      </div>
+<Layout title="Accueil">
+  <div class="opacity-0 animate-fadeIn text-center space-y-8 lg:space-y-20">
+    <div class="space-y-4 text-4xl lg:text-7xl">
+      <p>Bonjour 👋</p>
+      <p>Je m'appelle <span class="text-yellow-400">Maxence</span>.</p>
+    </div>
+    <div class="space-y-4 text-lg lg:text-2xl">
+      <p>
+        Développeur français de 22 ans et diplômé d'un bachelor
+        <span class="text-yellow-400">Concepteur Développeur d'Applications</span>
+        , je suis passionné par le développement web et backend.
+      </p>
+      <p>
+        Parcourez mon portfolio pour en savoir plus sur moi, ainsi que sur les projets auxquels j'ai
+        participé. Contact : <span class="text-yellow-400">noizetmaxence@pm.me</span>
+      </p>
     </div>
   </div>
-</MainLayout>
+</Layout>
