@@ -1,7 +1,7 @@
 ---
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import { technologies } from "~constants/technologies";
+import { technologies } from "~constants/technologies.constant";
 import Layout from "~layouts/Layout.astro";
 
 const svgs = import.meta.glob<{ default: ImageMetadata }>("/src/assets/svgs/*.svg");
@@ -52,10 +52,18 @@ const svgs = import.meta.glob<{ default: ImageMetadata }>("/src/assets/svgs/*.sv
               {group.map((tech) => (
                 <a href={tech.href} target="_blank" rel="noopener noreferrer">
                   <Image
+                    class="hidden lg:block"
+                    src={svgs[`/src/assets/svgs/${tech.name}.svg`]()}
+                    alt={tech.name}
+                    height={60}
+                    loading="eager"
+                  />
+                  <Image
+                    class="lg:hidden"
                     src={svgs[`/src/assets/svgs/${tech.name}.svg`]()}
                     alt={tech.name}
                     height={40}
-                    loading="eager"
+                    loading="lazy"
                   />
                 </a>
               ))}

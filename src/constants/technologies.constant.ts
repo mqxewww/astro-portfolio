@@ -1,4 +1,7 @@
-import type { Technology } from "~types/technology";
+type Technology = {
+  name: string;
+  href: string;
+};
 
 export const technologies: Technology[][] = [
   [
