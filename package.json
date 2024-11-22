@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "dev:host": "astro dev --host",
-    "build": "astro check && astro build",
+    "build": "astro build",
+    "build:check": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write \"**/*.{ts,js,mjs,cjs}\" && prettier --write \"**/*.astro\" --parser astro && eslint \"**/*.{astro,ts}\""
@@ -44,3 +45,4 @@
     "typescript": "5.5.3"
   }
 }
+
