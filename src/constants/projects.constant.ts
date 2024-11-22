@@ -48,8 +48,8 @@ export const projects: Project[] = [
     icons: ["astro", "typescript", "tailwindcss", "bunjs"],
     date: "Sep 2022",
     description: "Portfolio sur lequel vous êtes actuellement ✨.",
-    github_repo: "https://github.com/mqxewww/astro-portfolio",
-    url_visit: "https://portfolio.apps.mqxewww.dev"
+    github_repo: "https://github.com/mqxewww/portfolio",
+    url_visit: "https://mqxewww.dev"
   },
   {
     title: "Viticulteurs Market",
