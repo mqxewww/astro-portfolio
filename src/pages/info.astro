@@ -1,13 +1,25 @@
 ---
-import type { ImageMetadata } from "astro";
-import { Image } from "astro:assets";
-import { technologies } from "~constants/technologies.constant";
 import Layout from "~layouts/Layout.astro";
 
-const svgs = import.meta.glob<{ default: ImageMetadata }>("/src/assets/svgs/*.svg");
+// assets
+import HTML5SVG from "~assets/svgs/html5.svg";
+import JavascriptSVG from "~assets/svgs/javascript.svg";
+import MongoDBSVG from "~assets/svgs/mongodb.svg";
+import MySQLSVG from "~assets/svgs/mysql.svg";
+import NestJSSVG from "~assets/svgs/nestjs.svg";
+import NextJSSVG from "~assets/svgs/nextjs.svg";
+import PHPSVG from "~assets/svgs/php.svg";
+import ReactSVG from "~assets/svgs/react.svg";
+import SASSSVG from "~assets/svgs/sass.svg";
+import TailwindSVG from "~assets/svgs/tailwindcss.svg";
+import TypescriptSVG from "~assets/svgs/typescript.svg";
+import VueJSSVG from "~assets/svgs/vuejs.svg";
 ---
 
-<Layout title="Infos">
+<Layout
+  page="Infos"
+  description="Présentation de mon parcours de développeur web, de mes connaissances métiers, et de mes passions."
+>
   <div class="space-y-8 lg:space-y-20 pb-8 lg:pb-20 text-justify lg:text-xl">
     <div class="space-y-4">
       <h1 class="text-yellow-400 text-center text-3xl lg:text-6xl">Moi et mon expérience</h1>
@@ -46,30 +58,58 @@ const svgs = import.meta.glob<{ default: ImageMetadata }>("/src/assets/svgs/*.sv
         dans certains projets.
       </p>
       <div class="space-y-2">
-        {
-          technologies.map((group) => (
-            <div class="flex justify-center space-x-2">
-              {group.map((tech) => (
-                <a href={tech.href} target="_blank" rel="noopener noreferrer">
-                  <Image
-                    class="hidden lg:block"
-                    src={svgs[`/src/assets/svgs/${tech.name}.svg`]()}
-                    alt={tech.name}
-                    height={60}
-                    loading="eager"
-                  />
-                  <Image
-                    class="lg:hidden"
-                    src={svgs[`/src/assets/svgs/${tech.name}.svg`]()}
-                    alt={tech.name}
-                    height={40}
-                    loading="lazy"
-                  />
-                </a>
-              ))}
-            </div>
-          ))
-        }
+        <div class="flex justify-center space-x-2">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <HTML5SVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://www.php.net" target="_blank" rel="noopener noreferrer">
+            <PHPSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a
+            href="https://developer.mozilla.org/fr/docs/Web/JavaScript"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <JavascriptSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer">
+            <TypescriptSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">
+            <TailwindSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://sass-lang.com" target="_blank" rel="noopener noreferrer">
+            <SASSSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+        </div>
+
+        <div class="flex justify-center space-x-2">
+          <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer">
+            <VueJSSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+            <ReactSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
+            <NextJSSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://nestjs.com" target="_blank" rel="noopener noreferrer">
+            <NestJSSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+        </div>
+
+        <div class="flex justify-center space-x-2">
+          <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer">
+            <MySQLSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+          <a href="https://www.mongodb.com" target="_blank" rel="noopener noreferrer">
+            <MongoDBSVG class="w-auto h-10 qhd:h-16" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="space-y-4">
